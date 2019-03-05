@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <header></header>
-        <div></div><!-- 时间 -->
-        <ul>
-            <li>
-                <span></span><!-- 菜名 -->
-                <span></span><!-- 价格 -->
-            </li>
-        </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/bill.css" />
+    </head>
+    <body>
         <div>
-            <span>总额</span>
-            <span>34324</span>
+            <section class="foods-info-container">
+                <div class="title">
+                    <span class="restaurant-picture">
+                        <img :src="restaurantInfo.pic_url" />
+                    </span>
+                    <span class="restaurant-name">
+                        {{ restaurantInfo.name }}
+                    </span>
+                    <span class="icon"><i class="iconfont"></i></span>
+                </div>
+                {{ restaurantInfo.foods }}
+                <div
+                    class="foods-container"
+                    v-for="(item,index) in foods"
+                    :key="index"
+                >
+                    <span class="foods-picture">
+                        <img :src="item.pic_url" />
+                    </span>
+                    <div class="main-container">
+                        <div>
+                            <span class="foods-name">{{ item.name }}</span>
+                            <span class="price">
+                                ￥{{ Number(item.price * item.num).toFixed(2) }}
+                            </span>
+                        </div>
+                        <!--<span>正常</span>-->
+                        <span class="num">x{{ item.num }}</span>
+                    </div>
+                </div>
+                <div class="other-fee">
+                    <div class="food-container-fee">
+                        <span class="fee-name">餐盒费</span>
+                        <span class="price">￥0</span>
+                    </div>
+                    <div class="delivery-fee">
+                        <span class="fee-name">配送费</span>
+                        <span class="price">
+                            ￥{{ restaurantInfo.shipping_fee }}
+                        </span>
+                    </div>
+                </div>
+                <div class="total-price border-top">
+                    <span class="total-price ">
+                        总计￥{{ orderData.total_price.toFixed(2) }}
+                    </span>
+                    <span class="discount-price">优惠￥0</span>
+                    <span class="pay-price">
+                        实付
+                        <strong>
+                            ￥{{ orderData.total_price.toFixed(2) }}
+                        </strong>
+                    </span>
+                </div>
+                <div class="call-seller-container border-top">
+                    <span>联系商家</span>
+                </div>
+            </section>
         </div>
-    </div>
-</body>
+    </body>
 </html>
