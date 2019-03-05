@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .btn {
+    color: #fff;
+    background: #fc9153;
+    display: block;
+    margin: 0;
+    padding: 17px 16px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    /* background: #4a4c5b; */
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 20px;
+  }
+  .input-field {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #666;
+    line-height: inherit;
+    background-color: 1.429;
+    border-radius: 2px;
+    outline: none;
+    border: 0;
+    /* font-weight: 800; */
+  }
+  .input-field:after {
+    content: "";
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+  .wrapper {
+    background-color: #efeff4;
+    height: 100%;
+    padding: 10px;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.429;
+    /* background-color: #fff; */
+    position: relative;
+    padding-top: 20px;
+
+  }
+  .bar {
+    height: 200px;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="bar">
+      <h3>信息管理系统</h3>
+    </div>
+    
+    <form action="" class="form">
+      <label for="username">
+        <input type="text" class="input-field" placeholder="工号：" name="username" id="username">
+      </label>
+      <label for="password">
+        <input type="text" class="input-field" placeholder="密码：" name="password" id="password">
+      </label>
+      <button type="submit" class="btn">登录</button>
+    </form>
+  </div>
+</body>
+
+</html>
