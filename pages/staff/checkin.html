@@ -7,10 +7,11 @@
         <title>Document</title>
         <link rel="stylesheet" href="../../css/global.css" />
         <link rel="stylesheet" href="./public.css" />
+        <link rel="stylesheet" href="../../css/iconfont.css" />
     </head>
     <body>
-        <div class="header">
-            <a href="javascript:;" class="g-back"></a>
+        <div class="head-bar">
+            <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
             <h1>经营贷订单管理</h1>
         </div>
         <div class="wrapper">
@@ -68,7 +69,7 @@
                     $$("sign-txt").innerHTML = "已签到"
                 },
                 onFinish: function() {
-                    $$("sign-count").innerHTML = myday.length //已签到次数
+                    // $$("sign-count").innerHTML = myday.length //已签到次数
                     $$("idCalendarYear").innerHTML = this.Year
                     $$("idCalendarMonth").innerHTML = this.Month //表头年份
                 },
@@ -85,8 +86,8 @@
                     var res = cale.SignIn()
                     if (res == "1") {
                         $$("sign-txt").innerHTML = "已签到"
-                        $$("sign-count").innerHTML =
-                            parseInt($$("sign-count").innerHTML) + 1
+                        // $$("sign-count").innerHTML =
+                        //     parseInt($$("sign-count").innerHTML) + 1
                         isSign = true
                     } else if (res == "2") {
                         $$("sign-txt").innerHTML = "已签到"

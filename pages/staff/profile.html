@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
         <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <link rel="stylesheet" href="../../css/index.css">
         <style>
             .info-wrapper {
                 position: relative;
@@ -37,7 +39,7 @@
                 line-height: 12px;
                 color: #9ca3ae;
                 font-weight: 700;
-                margin-top: 4px;
+                margin-top: 14px;
             }
             .info-wrapper:after {
                 content: "";
@@ -88,7 +90,14 @@
                 width: 26px;
                 height: 26px;
                 margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
             }
+            .list-wrapper .f-item-hd i {
+                    font-size: 22px;
+                }
             .f-item-bd {
                 -webkit-box-flex: 1;
                 -webkit-flex: 1;
@@ -128,16 +137,31 @@
         <div class="info-wrapper">
             <div class="avatar">
                 <img
-                    src="http://img1.tiqianle.com/group/M00/0E/7C/wtQBAFgNt7uARVLYAADQ5yVM5uw712.png?e=1551820551&amp;token=a7e1ce3b9d78dcce3130ae35dfd7f945d7df54fa:e741bee5c40d305fe617c14aa65034b03a5fca72"
+                    src="../../img/avatar.jpg"
                 />
             </div>
-            <p class="name">分期乐·兄弟</p>
+            <p class="name">怡乐餐厅·何四</p>
             <p class="eName">566977</p>
         </div>
         <div class="list-wrapper">
             <div class="item-wrapper">
-                <a href="javascript:;" class="f-item f-item-arrow">
-                    <div class="f-item-hd"></div>
+                <a href="./checkin.html" class="f-item f-item-arrow">
+                    <div class="f-item-hd">
+                        <i class="iconfont icon-icon_namecard"></i>
+                    </div>
+                    <div class="f-item-bd">
+                        <p>个人资料</p>
+                    </div>
+                    <div class="f-item-ft">
+                        <!---->
+                    </div>
+                </a>
+            </div>
+            <div class="item-wrapper">
+                <a href="./checkin.html" class="f-item f-item-arrow">
+                    <div class="f-item-hd">
+                        <i class="iconfont icon-icon_attestation"></i>
+                    </div>
                     <div class="f-item-bd">
                         <p>考勤签到</p>
                     </div>
@@ -147,8 +171,10 @@
                 </a>
             </div>
             <div class="item-wrapper">
-                <a href="javascript:;" class="f-item f-item-arrow">
-                    <div class="f-item-hd"></div>
+                <a href="./salary.html" class="f-item f-item-arrow">
+                    <div class="f-item-hd">
+                        <i class="iconfont icon-icon_addresslist"></i>
+                    </div>
                     <div class="f-item-bd">
                         <p>薪酬查询</p>
                     </div>
@@ -161,5 +187,17 @@
                 <!---->
             </div>
         </div>
+        <div class="nav">
+                <ul>
+                    <li>
+                        <i class="iconfont icon-icon_Inbox"></i>
+                        工作台
+                    </li>
+                    <li class="actived">
+                        <i class="iconfont icon-icon_people_fill"></i>
+                        个人中心
+                    </li>
+                </ul>
+            </div>
     </body>
 </html>
