@@ -1,29 +1,27 @@
-@normal-color: #1f242a;
-@line-color: rgba(229, 229, 229, 0.4);
-@shadow-color: rgba(37, 46, 65, 0.1);
+@import './color.less';
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC,
-    "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC,
+        "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 ul,
 ol {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 li {
-  list-style: none;
+    list-style: none;
 }
 a {
-  color: @normal-color;
-  text-decoration: none;
+    color: @normal-color;
+    text-decoration: none;
 }
 p {
-  margin: 0;
+    margin: 0;
 }
 h1,
 h2,
@@ -31,5 +29,38 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+    margin: 0;
+}
+.header {
+    border-bottom: 1px solid #e7e7e7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 99;
+    width: 100%;
+    margin: 0 auto;
+    height: 6vh;
+
+    h1 {
+        margin: 0 auto;
+        font-size: 4.4vw;
+        font-weight: 700;
+        letter-spacing: 2px;
+        width: 76%;
+        overflow: hidden;
+        height: 6vh;
+        line-height: 6vh;
+        font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC,
+            "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    }
+    .g-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 6vh;
+        height: 6vh;
+    }
 }
