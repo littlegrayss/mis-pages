@@ -14,5 +14,14 @@
   },
   "dependencies": {
     "gulp-plumber": "^1.2.1"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote:": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "htmlWhitespaceSensitivity": "css"
   }
 }
