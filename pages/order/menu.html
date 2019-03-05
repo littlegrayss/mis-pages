@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/menu.css">
 </head>
 <body>
-    <div>
-        <header>
-            <span><</span>
-            <h2></h2>
-        </header>
-        <div></div><!-- 分类 -->
-        <div>
-            <div><!-- 一个菜 -->
-                <img src="" alt=""><!-- 图片 -->
-                <div>
-                    <span></span><!-- 名字 -->
-                    <span></span><!-- 价格 -->
-                </div>
-            </div>
-            <div><!-- 一个菜 -->
-                <img src="" alt=""><!-- 图片 -->
-                <div>
-                    <span></span><!-- 名字 -->
-                    <span></span><!-- 价格 -->
-                </div>
-            </div>
-            <div><!-- 一个菜 -->
-                <img src="" alt=""><!-- 图片 -->
-                <div>
-                    <span></span><!-- 名字 -->
-                    <span></span><!-- 价格 -->
-                </div>
-            </div>
+    <div id="menu">
+        <div class="left" ref="left">
+            <ul>
+                <li v-for="(category,index) in foodsData" :key="category.id" @click="mappingScroll(index)"
+                    :class="{'activity-menu': index == menuIndex}">
+                    {{category.name}}
+                </li>
+            </ul>
         </div>
-        <footer>
-            <span></span><!-- 总价 -->
-            <span></span><!-- 下单 -->
-        </footer>
-    </div>
+        <div class="right" ref="right">
+            <article ref="categorys">
+                <section v-for="(category,index) in foodsData" :key="category.id">
+                    <h2>{{category.name}}</h2>
+                    <article>
+                        <section v-for="spus in category.spus" :key="spus.id">
+                            <div class="img">
+                                <img :xsrc="spus.pic_url" src="../../../assets/shoploading.png">
+                            </div>
+                            <div class="info">
+                                <div class="name">{{spus.name}}</div>
+                                <div class="sell-num">月售 {{spus.month_saled_content}}</div>
+                                <span class="price"> ￥{{spus.skus[0].price}}</span>
+                            </div>
+                            <selector @showDot="showDotFun" :name="spus.name" :food_id="spus.skus[0].id"
+                                :price="spus.skus[0].price" :pic="spus.pic_url">
+                            </selector>
+                        </section>
+                    </article>
+                </section>
+            </article>
+        </div>
 </body>
 </html>

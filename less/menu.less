@@ -1,0 +1,87 @@
+#menu {
+    display: flex;
+    flex: 1;
+    padding-bottom: 1.368rem;
+    overflow: hidden;
+    .left, .right {
+      overflow: hidden;
+    }
+    /*菜单左侧列表样式*/
+    .left {
+    //   @include px2rem(width, 140);
+      width: 140px;
+      background: rgb(244, 244, 244);
+      ul {
+        li {
+          display: flex;
+        //   @include px2rem(height, 100);
+          height: 100px;
+          padding: 0 0.2rem;
+          /*justify-content: center;*/
+          align-items: center;
+          font-size: 0.3rem;
+        //   @include px2rem(line-height, 40);
+        line-height: 40px;
+          border-bottom: 1px dashed #ebeef5;
+          &.activity-menu {
+            background: #fff;
+          }
+        }
+      }
+    }
+    /*右侧商品样式*/
+    .right {
+      position: relative;
+      flex: 1;
+      article {
+        & > section {
+          padding-top: 0.2rem;
+          h2 {
+            font-size: 0.4rem;
+            font-weight: bold;
+            margin: 0 0.2rem;
+            padding-left: 0.2rem;
+            border-left: 3px solid yellow;
+          }
+          article {
+            section {
+              display: flex;
+              position: relative;
+              margin: 0 0.5rem;
+              padding: 0.2rem 0;
+              border-bottom: 1px solid #ebeef5;
+              .img {
+                // @include px2rem(width, 122);
+                // @include px2rem(height, 126);
+                width: 122px;
+                height: 126px;
+                margin-right: 0.2rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .info {
+                flex: 1;
+                vertical-align: top;
+                .name, .price {
+                  font-weight: bold;
+                }
+                .name {
+                  font-size: 0.3rem;
+                }
+                .sell-num {
+                  font-size: 0.3rem;
+                  margin: 0.2rem 0;
+                }
+                .price {
+                  color: rgb(251, 79, 69);
+                  font-size: 0.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
