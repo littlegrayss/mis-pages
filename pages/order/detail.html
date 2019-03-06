@@ -10,7 +10,33 @@
     <style>
       .box-wrap {
         height: 139px;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        position: relative;
+      }
+      .box-wrap:after {
+        display: block;
+        content: " ";
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid #dadee6;
+        -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+      }
+      .box-l, .box-r {
+        flex: 0 1 50%;
+      }
+      .content {
+        background-color: #f5f7f6;
+        height: calc(100vh - 139px - 6.5vh);
       }
       .item-wrap {
         background-color: #fff;
@@ -23,6 +49,16 @@
         font-size: 14px;
         color: #25324e;
       }
+      .item:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #dfdfdf;
+        -webkit-transform: scale(1, 0.5);
+        transform: scale(1, 0.5);
+      }
       .item-wrap .item .item-rigth {
         float: right;
         font-size: 14px;
@@ -33,19 +69,7 @@
       .item-wrap .item .item-rigth .amount {
         margin-right: 20px;
       }
-      .item-wrap:after {
-        display: block;
-        content: " ";
-        width: 100%;
-        box-sizing: border-box;
-        border-top: 1px solid #dadee6;
-        -webkit-transform: scaleY(0.5);
-        -ms-transform: scaleY(0.5);
-        transform: scaleY(0.5);
-        -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-        transform-origin: 0 0;
-      }
+      
     </style>
   </head>
   <body>
@@ -66,8 +90,8 @@
           <div>当前总额</div>
         </div>
       </section>
-      <section>
-        <ul class="item-wrap">
+      <section class="content">
+        <ul class="item-wrap" style="display:none">
           <li class="item">
             <span>xxx</span>
             <div class="item-rigth"><span class="amount">￥0.00</span></div>
