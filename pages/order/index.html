@@ -6,28 +6,178 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/global.css" />
     <style>
-    .detail-header {
-        /* background: #ecf4fb; */
-        border-top: 1px solid #ecf4fb;
+      .wrapper {
+        background-color: #f5f7f6;
       }
-      .detail-header .amount-header {
+      .detail-header {
         height: 139px;
-        border-top: 1px solid #ecf4fb;
-        margin-left: 28.8px;
+      }
+      .table-wrap {
+        padding: 4vh 6vw;
+      }
+      .table-row {
+        height: 5vh;
+        line-height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6vw;
+      }
+      .table-status .red,
+      .table-status .blue {
+        width: 6vw;
+        height: 3px;
+        border-radius: 2px;
+        display: inline-block;
+        margin: 0 4px;
+      }
+      .red {
+        background-color: #ff4d4f;
+      }
+      .blue {
+        background-color: #1890ff;
+      }
+      .table-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hall {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+      }
+      .hall li {
+        /* flex: 0 0 33%; */
+        width: 18vw;
+        height: 18vw;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px 0 rgba(37, 46, 65, 0.1);
+        position: relative;
+        margin-bottom: 4vh;
+        color: #fff;
+      }
+      .hall li a {
+        width: 100%;
+        height: 100%;
+      }
+      .hall li span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .table-site {
+        height: 6vh;
+        /* width: calc(100% - 6vw); */
+        display: flex;
+        justify-content: space-between;
+      }
+      .table-site span {
+        /* width: 50%; */
+        flex: 0 1 50%;
+        text-align: center;
+        line-height: 6vh;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+      .table-site span.tab-active {
+        border-bottom: 2px solid #1890ff;
+      }
+      .card {
+        display: block;
+        overflow: hidden;
+        color: #25324e;
+        background: #fff;
+        box-shadow: 0 2px 10px 0 rgba(37, 46, 65, 0.1);
+        border-radius: 5px;
+        margin: 8px;
       }
     </style>
   </head>
   <body>
     <div class="head-bar">
       <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
-      <h1>菜单</h1>
+      <h1>餐桌</h1>
     </div>
-    <section class="detail-header">
-      <div class="amount-header">
-
-      </div>
-    </section>
+    <div class="wrapper">
+      <section class="detail-header">
+        <div class="table-row">
+          <span class="date">2019-03-02 12:44</span>
+          <span class="table-status">
+            <span class="red"></span>
+            已开桌
+            <span class="blue"></span>
+            空
+          </span>
+        </div>
+        <div class="card">
+          <div class="table-wrap">
+            <div class="table-site">
+              <span class="tab-active">大厅</span>
+              <span>房间</span>
+            </div>
+            <ul class="hall">
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li class="red">
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li class="blue">
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+              <li>
+                <a href="./detail.html"></a>
+                <span>1</span>
+              </li>
+            </ul>
+            <ul class="room" style="display:none">
+              <li>
+                <a href=""></a>
+                <span>a</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
