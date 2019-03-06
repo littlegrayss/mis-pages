@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <style>
+        .tab-fixed .select-tab {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    font-size: 9px;
+    background: #fff;
+}
+.tab-fixed .select-tab li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: auto;
+}
+.tab-fixed .select-tab li span {
+    position: relative;
+    display: inline-block;
+    font-size: 9px;
+    color: #9CA3AE;
+    line-height: 10px;
+}
+.tab-fixed .select-tab .on {
+    background-image: linear-gradient(225deg,#FF974D 0,#FF6830 61%,#FF6831 100%);
+    border-radius: 16px;
+    height: 32px;
+    line-height: 32px;
+    width: 96px;
+    color: #fff;
+}
+      .wrapper {
+        background-color: #f5f7f6;
+        height: 100%;
+      }
+      .data-table {
+        margin: 7px;
+        margin-top: 15px;
+      }
+      .data-table .data-title {
+        padding-left: 10px;
+        color: #25324e;
+        font-size: 9px;
+        line-height: 10px;
+        margin-top: 7px;
+      }
+      .data-container {
+        padding: 7px;
+        border-radius: 5px;
+        margin: 7px;
+        background: #fff;
+        box-shadow: 0 2px 16px 0 rgba(37, 46, 65, 0.1);
+      }
+      .data-container .data-tab {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        text-align: center;
+        font-size: 7px;
+        color: #566272;
+        background-color: #fff;
+      }
+      .data-container .data-tab li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        height: 36px;
+        line-height: 36px;
+      }
+      .data-container .data-list .people-list {
+        background-color: #fff;
+        border-top: 1px solid #e7e7e7;
+        padding-bottom: 10px;
+      }
+      .data-container .data-list .people-list li:nth-of-type(2n + 1) {
+        background: #f9fafa;
+      }
+      .data-container .data-list .people-list li {
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .data-container .data-list li {
+        text-align: center;
+        font-size: 7px;
+      }
+      .data-container .data-list li .link {
+            color: #1F242A;
+            display: flex;
+            height: 36px;
+        }
+        .data-container .data-list li span {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1f242a;
+}
+    </style>
+  </head>
+  <body>
+    <div class="head-bar">
+      <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+      <h1>员工数据</h1>
+    </div>
+    <div class="wrapper">
+      <div class="tab-fixed">
+        <ul class="select-tab">
+          <li>
+            <span class="on">授信通过率</span>
+          </li>
+          <li>
+            <span class="">额度使用率</span>
+          </li>
+          <li>
+            <span class="">逾期率</span>
+          </li>
+        </ul>
+      </div>
+      <section class="data-table"><a class="data-title">数据排名</a></section>
+      <section class="data-container">
+        <ul class="data-tab">
+          <li><span>区域/经理</span></li>
+          <li style=""><span class="on down">授信通过率</span></li>
+          <li style="display: none;">
+            <span class="on down">额度使用率</span>
+          </li>
+          <li style="display: none;"><span class="on down">逾期率</span></li>
+          <li><span>通过/提交 (人)</span></li>
+        </ul>
+        <div class="data-list">
+          <ul class="people-list">
+            <li>
+              <div class="link">
+                <span>湖北渠道招商中心</span>
+                <span>64%</span>
+                <span>351/547</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>湖南渠道招商中心</span>
+                <span>57%</span>
+                <span>334/591</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>河南渠道招商中心</span>
+                <span>54%</span>
+                <span>215/401</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>广东渠道招商中心</span>
+                <span>49%</span>
+                <span>278/571</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>江西渠道招商中心</span>
+                <span>41%</span>
+                <span>124/300</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
