@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="../../css/global.css" />
     <link rel="stylesheet" href="../../css/iconfont.css" />
     <style>
-    .detail-header {
-        background: #ecf4fb;
-        border-top: 1px solid #ecf4fb;
-      }
-      .detail-header .amount-header {
+      .box-wrap {
         height: 139px;
-        border-top: 1px solid #ecf4fb;
-        margin-left: 28.8px;
+        
+      }
+      .item-wrap {
+        background-color: #fff;
+        list-style-type: none;
+      }
+      .item-wrap .item {
+        margin-left: 20px;
+        height: 76px;
+        line-height: 76px;
+        font-size: 14px;
+        color: #25324e;
+      }
+      .item-wrap .item .item-rigth {
+        float: right;
+        font-size: 14px;
+        color: #25324e;
+        margin-right: 19.2px;
+        position: relative;
+      }
+      .item-wrap .item .item-rigth .amount {
+        margin-right: 20px;
+      }
+      .item-wrap:after {
+        display: block;
+        content: " ";
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid #dadee6;
+        -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
       }
     </style>
-</head>
-<body>
-    <div>
-        <header>
-            <h2></h2><!-- 桌号 -->
-        </header>
-        <div>
-            <div></div><!-- 入座时间 -->
-            <div></div><!-- 人数 -->
-            <ul>
-                <li>
-                    <span></span><!-- 菜名 -->
-                    <span></span><!-- 状态 -->
-                    <span></span><!-- 价格 -->
-                </li>
-            </ul>
-        </div>
-        <footer>
-            <div>
-                <span></span><!-- 下单 -->
-                <span></span><!-- 结账 -->
-            </div>
-        </footer>
-    </div>
-
+  </head>
+  <body>
     <div class="head-bar">
-        <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
-        <h1>菜单</h1>
+      <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+      <h1>菜单</h1>
     </div>
     <div class="wrapper">
-    <section class="detail-header">
-        <div class="amount-header"></div>
-    </section>
+      <section class="box-wrap">
+        <div class="box-l">
+          <div>桌号</div>
+          <div>1</div>
+          <div class="">状态</div>
+        </div>
+        <div class="box-r">
+          <div>开单时间</div>
+          <div>人数</div>
+          <div>当前总额</div>
+        </div>
+      </section>
+      <section>
+        <ul class="item-wrap">
+          <li class="item">
+            <span>xxx</span>
+            <div class="item-rigth"><span class="amount">￥0.00</span></div>
+          </li>
+          <li class="item">
+            <span>xxx</span>
+            <div class="item-rigth"><span class="amount">￥0.00</span></div>
+          </li>
+          <li class="item">
+            <span>xxx</span>
+            <div class="item-rigth"><span class="amount">￥0.00</span></div>
+          </li>
+          <li class="item">
+            <span>xxx</span>
+            <div class="item-rigth"><span class="amount">￥0.00</span></div>
+          </li>
+          <!---->
+        </ul>
+        <!---->
+      </section>
     </div>
-</body>
+  </body>
 </html>
