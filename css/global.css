@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #1f242a;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.head-bar {
+  border-bottom: 1px solid #e7e7e7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 99;
+  width: 100%;
+  margin: 0 auto;
+  height: 7vh;
+}
+.head-bar h1 {
+  margin: 0 auto;
+  font-size: 4.4vw;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 76%;
+  overflow: hidden;
+  height: 7vh;
+  line-height: 7vh;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, PingFang SC, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+.head-bar .g-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 7vh;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  padding-top: 7vh;
+}

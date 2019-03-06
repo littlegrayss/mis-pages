@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/iconfont.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      .info-wrapper {
+        position: relative;
+        height: 268px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-wrapper .avatar {
+        width: 80px;
+        height: 80px;
+        margin-top: 77px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .info-wrapper .avatar img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .info-wrapper .name {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 16px;
+        font-weight: 700;
+      }
+      .info-wrapper .eName {
+        font-size: 13px;
+        line-height: 12px;
+        color: #9ca3ae;
+        font-weight: 700;
+        margin-top: 14px;
+      }
+      .info-wrapper:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 32px;
+        width: 16px;
+        height: 2px;
+        margin-left: -8px;
+        background-image: linear-gradient(90deg, #ff6831, #ff974d);
+        border-radius: 8px;
+      }
+
+      .f-item {
+        padding: 21px 24px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        font-size: 15px;
+        color: #1f242a;
+      }
+      .f-grid,
+      .f-grids,
+      .f-item,
+      .f-list {
+        position: relative;
+      }
+
+      .f-item::before {
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        box-sizing: border-box;
+        color: #e2e5eb;
+        border: 1px solid #e2e5eb;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        border-bottom: 0;
+        left: 17px;
+      }
+
+      .list-wrapper .f-item-hd {
+        width: 26px;
+        height: 26px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .list-wrapper .f-item-hd i {
+        font-size: 22px;
+      }
+      .f-item-bd {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+      }
+      .f-item-ft {
+        text-align: right;
+        color: grey;
+        padding-right: 13px;
+        position: relative;
+      }
+
+      .f-item.f-item-arrow:after {
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        border-width: 2px 2px 0 0;
+        border-color: #c8c8cd;
+        border-style: solid;
+        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        top: 50%;
+        margin-top: -4px;
+        right: 28.5px;
+      }
+      .f-item.f-item-arrow:after,
+      .f-item::before {
+        content: " ";
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info-wrapper">
+      <div class="avatar">
+        <img src="../img/avatar.jpg" />
+      </div>
+      <p class="name">怡乐餐厅·何四</p>
+      <p class="eName">566977</p>
+    </div>
+    <div class="list-wrapper">
+      <div class="item-wrapper">
+        <a href="./staff/infomation.html" class="f-item f-item-arrow">
+          <div class="f-item-hd">
+            <i class="iconfont icon-icon_namecard"></i>
+          </div>
+          <div class="f-item-bd">
+            <p>个人资料</p>
+          </div>
+          <div class="f-item-ft">
+            <!---->
+          </div>
+        </a>
+      </div>
+      <div class="item-wrapper">
+        <a href="./staff/checkin.html" class="f-item f-item-arrow">
+          <div class="f-item-hd">
+            <i class="iconfont icon-icon_attestation"></i>
+          </div>
+          <div class="f-item-bd">
+            <p>考勤签到</p>
+          </div>
+          <div class="f-item-ft">
+            <!---->
+          </div>
+        </a>
+      </div>
+      <div class="item-wrapper">
+        <a href="./staff/salary.html" class="f-item f-item-arrow">
+          <div class="f-item-hd">
+            <i class="iconfont icon-icon_addresslist"></i>
+          </div>
+          <div class="f-item-bd">
+            <p>薪酬查询</p>
+          </div>
+          <div class="f-item-ft">
+            <!---->
+          </div>
+        </a>
+      </div>
+      <div class="item-wrapper">
+        <!---->
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li>
+          <i class="iconfont icon-icon_Inbox"></i>
+          工作台
+        </li>
+        <li class="actived">
+          <i class="iconfont icon-icon_people_fill"></i>
+          个人中心
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

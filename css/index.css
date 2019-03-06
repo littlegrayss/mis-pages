@@ -1,0 +1,113 @@
+.head {
+  padding: 4vh 8vw 1vh 8vw;
+  color: #1f242a;
+  font-size: 14px;
+}
+.head .date {
+  line-height: 32px;
+}
+.head .date .number {
+  font-family: DINPro-Medium;
+  font-size: 24px;
+  font-weight: 800;
+}
+.head .date .month {
+  font-size: 10px;
+  font-weight: 600;
+  transform: scale(0.5);
+}
+.head p {
+  font-size: 1.867vw;
+}
+.order-handler-wrapper {
+  padding: 4vh 5vw;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 0.7vw 3vw 0 rgba(37, 46, 65, 0.1);
+}
+.order-list-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.order-list-wrapper li {
+  width: 25%;
+  height: auto;
+  text-align: center;
+}
+.order-list-wrapper li a .icon {
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.order-list-wrapper li a .icon img {
+  width: 100%;
+}
+.order-list-wrapper li a p {
+  font-size: 2.067vw;
+  line-height: 1;
+}
+.panel-wrappar {
+  margin: 4vh 5vw;
+  box-shadow: 0 0.3vh 2vh 0 rgba(37, 46, 65, 0.1);
+  border-radius: 8px;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-wrappar .panel-hd {
+  width: 15vw;
+  height: 100%;
+}
+.panel-wrappar .panel-bd {
+  flex-grow: 1;
+  text-align: left;
+  line-height: 4vh;
+}
+.panel-wrappar .panel-bd h4 {
+  font-size: 4.067vw;
+}
+.panel-wrappar .panel-bd p {
+  font-size: 2vw;
+}
+.panel-wrappar .panel-fd {
+  width: 12vw;
+  height: 100%;
+}
+.container {
+  /* background-color: #efeff4; */
+  height: 100%;
+  padding: 10px;
+}
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: #fff;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  height: 100%;
+}
+.nav ul li {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-box-pack: center;
+  width: 50%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+}
+.nav ul .actived {
+  color: #e8864c;
+}

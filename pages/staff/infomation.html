@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <style>
+    .info-container .info-item-body {
+    margin-bottom: 56px;
+}
+.item-list {
+    padding-top: 13px;
+    overflow: hidden;
+}
+.lego-group-title {
+    padding-left: 16px;
+    font-size: 13px;
+    color: #979dab;
+    line-height: 15px;
+}
+.border-size-fix {
+    position: relative;
+    border: 0;
+}
+
+.lego-group {
+    border-top: 1px solid #dadee6;
+    border-bottom: 1px solid #dadee6;
+    margin: 8px 0 12px;
+    background: #fff;
+}
+.lego-input-wrapper {
+    height: 48px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 14px 0 16px;
+    margin: 16px 0;
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.border-size-fix {
+    position: relative;
+    border: 0;
+}
+.lego-group .lego-input-wrapper, .lego-group .lego-list-wrapper, .lego-group .lego-textarea-wrapper {
+    padding-left: 2px;
+    margin: 0 0 0 14px;
+    border: 0;
+    border-bottom: 1px solid #e5e8ed;
+}
+.lego-input-prepend {
+    flex-basis: 80px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #25324e;
+    padding-right: 11px;
+}
+input:disabled, textarea:disabled {
+    background-color: #fff;
+    pointer-events: none;
+    cursor: not-allowed;
+    -webkit-text-fill-color: #737c8e;
+    opacity: 1;
+    color: #737c8e;
+}
+
+.lego-input {
+    flex-grow: 1;
+    width: 50px;
+    font-size: 14px;
+    color: #25324e;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 0;
+    height: 18px;
+    line-height: 18px;
+    -webkit-appearance: none;
+}
+.border-size-fix:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #dadee6;
+    border-bottom: 1px solid #dadee6;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    transform: scale(.5);
+    transform-origin: left top;
+    pointer-events: none;
+}
+    </style>
+  </head>
+  <body>
+    <section class="item-list info-item-body">
+      <div class="lego-group-wrapper">
+        <p class="lego-group-title">个人信息</p>
+        <div class="lego-group border-size-fix">
+          <div class="lego-input-wrapper input-disabled border-size-fix">
+            <div class="lego-input-prepend">姓名</div>
+            <!---->
+            <input
+              type="text"
+              title="姓名"
+              placeholder="请输入姓名"
+              disabled="disabled"
+              autocomplete="off"
+              class="lego-input"
+            />
+            <!---->
+          </div>
+          <!---->
+          <!---->
+          <div class="lego-list-wrapper list-disabled border-size-fix">
+            <!---->
+            <div class="lego-list-title">毕业学校</div>
+            <div class="lego-list-value" style="text-align: left;">
+              华南师范大学大学城校区
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">学校性质</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择学校性质
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">婚姻状况</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择婚姻状况
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">负债情况</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择负债情况
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="lego-group-wrapper">
+        <p class="lego-group-title">公司信息</p>
+        <div class="lego-group border-size-fix">
+          <div class="lego-input-wrapper border-size-fix">
+            <div class="lego-input-prepend">公司名称</div>
+            <!---->
+            <input
+              type="text"
+              title="公司名称"
+              placeholder="请输入公司名称"
+              autocomplete="off"
+              class="lego-input"
+            />
+            <!---->
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">所属行业</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择所属行业
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">职业信息</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择职业信息
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">月收入</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择月收入
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="lego-group-wrapper">
+        <p class="lego-group-title">居住信息</p>
+        <div class="lego-group border-size-fix">
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">居住状况</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择居住状况
+            </div>
+            
+          </div>
+          <div class="lego-list-wrapper border-size-fix">
+            <!---->
+            <div class="lego-list-title">居住地区</div>
+            <div class="lego-list-placeholder" style="text-align: left;">
+              请选择居住地区
+            </div>
+            
+          </div>
+          <div class="lego-textarea-wrapper border-size-fix">
+            <textarea
+              type="textarea"
+              placeholder="请输入详细居住地址"
+              autocomplete="off"
+              class="lego-textarea"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+     
+      <!---->
+    </section>
+  </body>
+</html>

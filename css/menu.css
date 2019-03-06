@@ -1,0 +1,78 @@
+#menu {
+  display: flex;
+  flex: 1;
+  padding-bottom: 1.368rem;
+  overflow: hidden;
+  /*菜单左侧列表样式*/
+  /*右侧商品样式*/
+}
+#menu .left,
+#menu .right {
+  overflow: hidden;
+}
+#menu .left {
+  width: 140px;
+  background: #f4f4f4;
+}
+#menu .left ul li {
+  display: flex;
+  height: 100px;
+  padding: 0 0.2rem;
+  /*justify-content: center;*/
+  align-items: center;
+  font-size: 0.3rem;
+  line-height: 40px;
+  border-bottom: 1px dashed #ebeef5;
+}
+#menu .left ul li.activity-menu {
+  background: #fff;
+}
+#menu .right {
+  position: relative;
+  flex: 1;
+}
+#menu .right article > section {
+  padding-top: 0.2rem;
+}
+#menu .right article > section h2 {
+  font-size: 0.4rem;
+  font-weight: bold;
+  margin: 0 0.2rem;
+  padding-left: 0.2rem;
+  border-left: 3px solid yellow;
+}
+#menu .right article > section article section {
+  display: flex;
+  position: relative;
+  margin: 0 0.5rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid #ebeef5;
+}
+#menu .right article > section article section .img {
+  width: 122px;
+  height: 126px;
+  margin-right: 0.2rem;
+}
+#menu .right article > section article section .img img {
+  width: 100%;
+  height: 100%;
+}
+#menu .right article > section article section .info {
+  flex: 1;
+  vertical-align: top;
+}
+#menu .right article > section article section .info .name,
+#menu .right article > section article section .info .price {
+  font-weight: bold;
+}
+#menu .right article > section article section .info .name {
+  font-size: 0.3rem;
+}
+#menu .right article > section article section .info .sell-num {
+  font-size: 0.3rem;
+  margin: 0.2rem 0;
+}
+#menu .right article > section article section .info .price {
+  color: #fb4f45;
+  font-size: 0.4rem;
+}

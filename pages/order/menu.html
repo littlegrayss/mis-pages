@@ -1,44 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-</head>
-<body>
-    <div id="menu">
-        <div class="left" ref="left">
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/iconfont.css" />
+    <style>
+      .goods {
+        display: flex;
+        position: absolute;
+        top: 190px;
+        bottom: 51px;
+        overflow: hidden;
+        width: 100%;
+      }
+      .goods .menu-wrapper {
+        flex: 0 0 85px;
+        background: #f4f4f4;
+      }
+      .goods .foods-wrapper {
+        flex: 1;
+      }
+      .goods .menu-wrapper .menu-item {
+        list-style-type: none;
+        padding: 16px 23px 15px 10px;
+        border-bottom: 1px solid #e4e4e4;
+        position: relative;
+      }
+      .goods .foods-wrapper {
+        overflow: auto;
+        flex: 1;
+      }
+      .goods .menu-wrapper .menu-item .text {
+        font-size: 13px;
+        color: #333333;
+        line-height: 17px;
+        vertical-align: middle;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .goods .menu-wrapper .menu-item .text .icon {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+      }
+      /* 专场样式 */
+      .goods .foods-wrapper .container-list {
+        padding: 11px 11px 0 11px;
+        border-bottom: 1px solid #e4e4e4;
+      }
+      .goods .foods-wrapper .container-list img {
+        width: 100%;
+        margin-bottom: 11px;
+        border-radius: 5px;
+      }
+      /* 具体分类商品布局 */
+      .goods .foods-wrapper .food-list {
+        padding: 11px;
+      }
+      .goods .foods-wrapper .food-list .title {
+        height: 13px;
+        font-size: 13px;
+        background: url(./img/btn_yellow_highlighted@2x.png) no-repeat left
+          center;
+        background-size: 2px 10px;
+        padding-left: 7px;
+        margin-bottom: 12px;
+      }
+      .goods .foods-wrapper .food-list .food-item {
+        display: flex;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .goods .foods-wrapper .food-list .food-item .icon {
+        flex: 0 0 93px;
+        background-position: center;
+        background-size: 120% 100%;
+        background-repeat: no-repeat;
+        margin-right: 11px;
+        height: 75px;
+      }
+      .goods .foods-wrapper .food-list .food-item .content {
+        flex: 1;
+      }
+      /* 具体内容样式 */
+      .goods .foods-wrapper .food-list .food-item .content .name {
+        font-size: 16px;
+        line-height: 21px;
+        color: #333333;
+        margin-bottom: 10px;
+        padding-right: 27px;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .desc {
+        font-size: 10px;
+        line-height: 19px;
+        color: #bfbfbf;
+        margin-bottom: 8px;
+        /* 超出部分显示省略号*/
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .extra {
+        font-size: 10px;
+        color: #bfbfbf;
+        margin-bottom: 7px;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .extra .saled {
+        margin-right: 14px;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .product {
+        height: 15px;
+        margin-bottom: 6px;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .price {
+        font-size: 0;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .price .text {
+        font-size: 14px;
+        color: #fb4e44;
+      }
+      .goods .foods-wrapper .food-list .food-item .content .price .unit {
+        font-size: 12px;
+        color: #bfbfbf;
+      }
+      /* 当前选中 */
+      .goods .menu-wrapper .menu-item.current {
+        background: white;
+        font-weight: bold;
+        margin-top: -1px;
+      }
+      .goods .menu-wrapper .menu-item:first-child.current {
+        margin-top: 1px;
+      }
+      .goods .foods-wrapper .food-list .food-item .cartcontrol-wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .goods .menu-wrapper .menu-item .num {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        color: white;
+        background: red;
+        text-align: center;
+        font-size: 7px;
+        line-height: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head-bar">
+      <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+      <h1>菜单</h1>
+    </div>
+    <div class="goods">
+      <!--分类列表-->
+      <div class="menu-wrapper" ref="menuScroll">
+        <ul>
+          <!-- <li
+            class="menu-item"
+            :class="{'current':currentIndex===0}"
+            @click="selectMenu(0)"
+          >
+            <p class="text">
+               <img
+                                class="icon"
+                                :src="container.tag_icon"
+                                v-if="container.tag_icon"
+                            /> 
+              tag
+            </p>
+          </li> -->
+
+          <li
+            class="menu-item"
+            :class="{'current':currentIndex === index + 1}"
+            v-for="(item,index) in goods"
+            :key="index"
+            @click="selectMenu(index+1)"
+          >
+            <p class="text">
+              <!-- <img
+                                class="icon"
+                                :src="item.icon"
+                                v-if="item.icon"
+                            /> -->
+              鲍
+            </p>
+            <!-- <i class="num" v-show="calculateCount(item.spus)">
+                            {{ calculateCount(item.spus) }}
+                        </i> -->
+          </li>
+
+          <li
+            class="menu-item"
+            :class="{'current':currentIndex === index + 1}"
+            v-for="(item,index) in goods"
+            :key="index"
+            @click="selectMenu(index+1)"
+          >
+            <p class="text">燕</p>
+          </li>
+          <li
+            class="menu-item"
+            :class="{'current':currentIndex === index + 1}"
+            v-for="(item,index) in goods"
+            :key="index"
+            @click="selectMenu(index+1)"
+          >
+            <p class="text">翅</p>
+          </li>
+          <li
+            class="menu-item current"
+            :class="{'current':currentIndex === index + 1}"
+            v-for="(item,index) in goods"
+            :key="index"
+            @click="selectMenu(index+1)"
+          >
+            <p class="text">烧腊</p>
+          </li>
+          <li
+            class="menu-item"
+            :class="{'current':currentIndex === index + 1}"
+            v-for="(item,index) in goods"
+            :key="index"
+            @click="selectMenu(index+1)"
+          >
+            <p class="text">刺身</p>
+          </li>
+
+        </ul>
+      </div>
+
+      <!--商品列表-->
+      <div class="foods-wrapper" ref="foodScroll">
+        <ul>
+          <li
+            v-for="(item,index) in goods"
+            :key="index"
+            class="food-list food-list-hook"
+          >
+            <h3 class="title">烧腊</h3>
+            <!-- 具体的商品列表 -->
             <ul>
-                <li v-for="(category,index) in foodsData" :key="category.id" @click="mappingScroll(index)"
-                    :class="{'activity-menu': index == menuIndex}">
-                    {{category.name}}
-                </li>
+              <li
+                v-for="(food,index) in item.spus"
+                :key="index"
+                @click="showDetail(food)"
+                class="food-item"
+              >
+                <div
+                  class="icon"
+                  style="background-image: url(../../img/1.jpeg)"
+                ></div>
+                <div class="content">
+                  <h3 class="name">豉油鸡</h3>
+                  <p class="desc" v-if="food.description">
+                    形容
+                  </p>
+                  <div class="extra">
+                    <span class="saled">
+                      月销量 4444
+                    </span>
+                    <span class="praise">
+                      点赞
+                    </span>
+                  </div>
+                  <!-- <img class="product" alt="" /> -->
+                  <p class="price">
+                    <span class="text">
+                      ¥128
+                    </span>
+                    <span class="unit">
+                      /例
+                    </span>
+                  </p>
+                </div>
+                <div class="cartcontrol-wrapper">
+                  <app-cart-control :food="food"></app-cart-control>
+                </div>
+              </li>
+
+              <li
+                v-for="(food,index) in item.spus"
+                :key="index"
+                @click="showDetail(food)"
+                class="food-item"
+              >
+                <div
+                  class="icon"
+                  style="background-image: url(../../img/1.jpeg)"
+                ></div>
+                <div class="content">
+                  <h3 class="name">菜名</h3>
+                  <p class="desc" v-if="food.description">
+                    形容
+                  </p>
+                  <div class="extra">
+                    <span class="saled">
+                      月销量
+                    </span>
+                    <span class="praise">
+                      点赞
+                    </span>
+                  </div>
+                  <!-- <img class="product" alt="" /> -->
+                  <p class="price">
+                    <span class="text">
+                      $12
+                    </span>
+                    <span class="unit">
+                      /例
+                    </span>
+                  </p>
+                </div>
+                <div class="cartcontrol-wrapper">
+                  <app-cart-control :food="food"></app-cart-control>
+                </div>
+              </li>
+
+              <li
+                v-for="(food,index) in item.spus"
+                :key="index"
+                @click="showDetail(food)"
+                class="food-item"
+              >
+                <div
+                  class="icon"
+                  style="background-image: url(../../img/1.jpeg)"
+                ></div>
+                <div class="content">
+                  <h3 class="name">菜名</h3>
+                  <p class="desc" v-if="food.description">
+                    形容
+                  </p>
+                  <div class="extra">
+                    <span class="saled">
+                      月销量
+                    </span>
+                    <span class="praise">
+                      点赞
+                    </span>
+                  </div>
+                  <!-- <img class="product" alt="" /> -->
+                  <p class="price">
+                    <span class="text">
+                      $12
+                    </span>
+                    <span class="unit">
+                      /例
+                    </span>
+                  </p>
+                </div>
+                <div class="cartcontrol-wrapper">
+                  <app-cart-control :food="food"></app-cart-control>
+                </div>
+              </li>
+
+              <li
+                v-for="(food,index) in item.spus"
+                :key="index"
+                @click="showDetail(food)"
+                class="food-item"
+              >
+                <div
+                  class="icon"
+                  style="background-image: url(../../img/1.jpeg)"
+                ></div>
+                <div class="content">
+                  <h3 class="name">菜名</h3>
+                  <p class="desc" v-if="food.description">
+                    形容
+                  </p>
+                  <div class="extra">
+                    <span class="saled">
+                      月销量
+                    </span>
+                    <span class="praise">
+                      点赞
+                    </span>
+                  </div>
+                  <!-- <img class="product" alt="" /> -->
+                  <p class="price">
+                    <span class="text">
+                      $12
+                    </span>
+                    <span class="unit">
+                      /例
+                    </span>
+                  </p>
+                </div>
+                <div class="cartcontrol-wrapper">
+                  <!-- <app-cart-control :food="food"></app-cart-control> -->
+                </div>
+              </li>
+
             </ul>
-        </div>
-        <div class="right" ref="right">
-            <article ref="categorys">
-                <section v-for="(category,index) in foodsData" :key="category.id">
-                    <h2>{{category.name}}</h2>
-                    <article>
-                        <section v-for="spus in category.spus" :key="spus.id">
-                            <div class="img">
-                                <img :xsrc="spus.pic_url" src="../../../assets/shoploading.png">
-                            </div>
-                            <div class="info">
-                                <div class="name">{{spus.name}}</div>
-                                <div class="sell-num">月售 {{spus.month_saled_content}}</div>
-                                <span class="price"> ￥{{spus.skus[0].price}}</span>
-                            </div>
-                            <selector @showDot="showDotFun" :name="spus.name" :food_id="spus.skus[0].id"
-                                :price="spus.skus[0].price" :pic="spus.pic_url">
-                            </selector>
-                        </section>
-                    </article>
-                </section>
-            </article>
-        </div>
-</body>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./bscroll.min.js"></script>
+    <script>
+    var foodWrap = document.querySelector('foods-wrapper');
+    var foodScroll = new BScroll(foodWrap);
+    </script>
+  </body>
 </html>
