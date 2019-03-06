@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="../../css/iconfont.css" />
     <style>
       .box-wrap {
-        height: 139px;
+        height: 20vh;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: flex-end;
         position: relative;
+        padding: 4vh 6vw;
+        box-sizing: border-box;
+        font-size: 4vw;
       }
       .box-wrap:after {
         display: block;
@@ -28,15 +31,51 @@
         -ms-transform-origin: 0 0;
         transform-origin: 0 0;
         position: absolute;
-        bottom: 0; 
+        bottom: 0;
         left: 0;
       }
-      .box-l, .box-r {
+      .box-l,
+      .box-r {
         flex: 0 1 50%;
+      }
+      .box-l .box-row{
+        /* line-height: 8vh; */
+        margin-top: 4vh;
+      }
+      .box-l .num {
+        font-size: 32px;
+        font-weight: 800;
+        margin: 0 10vw;
+      }
+      .box-l .status {
+        position: relative;
+        margin: 0 4vw;
+        color:#dfdfdf;
+        border: 2px solid #dfdfdf;
+        border-radius: 6vw;
+        padding: 1vh 2vw;
+      }
+      /* .box-l .status::after {
+        content: ' ';
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #25324e;
+        width: 12vw;
+        height: 3vh;
+        border-radius: 6vw;
+      } */
+      .box-r div {
+        /* line-height: 5vh; */
+        margin-top: 1vh;
+      }
+      .box-r .value {
+        float: right;
       }
       .content {
         background-color: #f5f7f6;
-        height: calc(100vh - 139px - 6.5vh);
+        height: calc(100vh - 20vh - 6.5vh);
       }
       .item-wrap {
         background-color: #fff;
@@ -69,7 +108,43 @@
       .item-wrap .item .item-rigth .amount {
         margin-right: 20px;
       }
-      
+      .btn-wrap {
+        width: 100%;
+        height: 51px;
+        background: #fc9153;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        z-index: 99;
+        color: #fff;
+        text-align: center;
+        line-height: 51px;
+      }
+      .btn-wrap span {
+        margin: 0 auto;
+      }
+      .btn-wrap-end {
+        width: 100%;
+        height: 51px;
+        background: #fc9153;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        z-index: 99;
+        color: #fff;
+        text-align: center;
+        line-height: 51px;
+      }
+      .btn-wrap-end a {
+        flex: 0 1 50%;
+        color: #fff;
+      }
+      .btn-wrap-end a:first-of-type {
+        border-right: 1px solid #f5f7f6;
+      }
+  
     </style>
   </head>
   <body>
@@ -80,14 +155,19 @@
     <div class="wrapper">
       <section class="box-wrap">
         <div class="box-l">
-          <div>桌号</div>
-          <div>1</div>
-          <div class="">状态</div>
+          <div class="box-row">
+            <span class="label">桌号</span>
+            <span class="num">1</span>
+          </div>
+          <div class="box-row">
+            <span class="">状态</span>
+            <span class="status">未开单</span>
+          </div>
         </div>
         <div class="box-r">
-          <div>开单时间</div>
-          <div>人数</div>
-          <div>当前总额</div>
+          <div>开单时间<span class="value">wu</span></div>
+          <div>人数<span class="value">0</span></div>
+          <div>当前总额<span class="value">0</span></div>
         </div>
       </section>
       <section class="content">
@@ -112,6 +192,18 @@
         </ul>
         <!---->
       </section>
+
+      <a class="btn-wrap" href="./menu.html">
+       <span>开单</span> 
+      </a>
+      <div class="btn-wrap-end">
+        <a href="./menu.html">
+          <span>加单</span>
+        </a>
+        <a href="./bill.html">
+          <span>结账</span>
+        </a>
+      </div>
     </div>
   </body>
 </html>
