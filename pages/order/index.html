@@ -10,20 +10,25 @@
     <style>
       .wrapper {
         background-color: #f5f7f6;
+        height: 100%;
+        /* position: relative; */
+        /* z-index: -1; */
       }
       .detail-header {
         height: 139px;
       }
       .table-wrap {
-        padding: 4vh 6vw;
+        padding: 1.5vh 3vw;
       }
       .table-row {
-        height: 5vh;
-        line-height: 5vh;
+        height: 6vh;
+        line-height: 6vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 6vw;
+        /* margin: 1vh; */
+        background-color: #fff;
       }
       .table-status .red,
       .table-status .blue {
@@ -44,26 +49,40 @@
         justify-content: center;
         align-items: center;
       }
-      .hall {
+      .hall,
+      .room {
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
+        padding: 4vw;
+        /* display: none; */
+        visibility: hidden;
       }
       .hall li {
-        /* flex: 0 0 33%; */
         width: 18vw;
         height: 18vw;
         border-radius: 50%;
         box-shadow: 0 4px 6px 0 rgba(37, 46, 65, 0.1);
         position: relative;
-        margin-bottom: 4vh;
+        margin-top: 4vh;
         color: #fff;
       }
-      .hall li a {
+      .room li {
+        width: 18vw;
+        height: 18vw;
+        /* border-radius: 50%; */
+        box-shadow: 0 4px 6px 0 rgba(37, 46, 65, 0.1);
+        position: relative;
+        margin-top: 4vh;
+        color: #fff;
+      }
+      .hall li a,
+      .room li a {
         width: 100%;
         height: 100%;
       }
-      .hall li span {
+      .hall li span,
+      .room li span {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -85,6 +104,7 @@
       }
       .table-site span.tab-active {
         border-bottom: 2px solid #1890ff;
+        /* display: inline-block; */
       }
       .card {
         display: block;
@@ -93,7 +113,11 @@
         background: #fff;
         box-shadow: 0 2px 10px 0 rgba(37, 46, 65, 0.1);
         border-radius: 5px;
-        margin: 8px;
+        /* margin: 0 4px; */
+      }
+      .wrap-active {
+        /* display: block; */
+        visibility: visible;
       }
     </style>
   </head>
@@ -113,13 +137,14 @@
             空
           </span>
         </div>
-        <div class="card">
-          <div class="table-wrap">
+
+        <div class="table-wrap">
+          <div class="card">
             <div class="table-site">
-              <span class="tab-active">大厅</span>
-              <span>房间</span>
+              <span class="tab-active tab-btn1">大厅</span>
+              <span class="tab-btn2">房间</span>
             </div>
-            <ul class="hall">
+            <ul class="hall wrap-active">
               <li>
                 <a href="./detail.html"></a>
                 <span>1</span>
@@ -169,9 +194,9 @@
                 <span>1</span>
               </li>
             </ul>
-            <ul class="room" style="display:none">
+            <ul class="room">
               <li>
-                <a href=""></a>
+                <a href="./detail.html"></a>
                 <span>a</span>
               </li>
             </ul>
@@ -179,5 +204,29 @@
         </div>
       </section>
     </div>
+    <script>
+      var hall = document.querySelector(".hall")
+      var room = document.querySelector(".room")
+      var btn1 = document.querySelector(".tab-btn1")
+      var btn2 = document.querySelector(".tab-btn2")
+      btn1.addEventListener("click", (e) => {
+        var isActive = room.classList.contains("wrap-active")
+        if (isActive) {
+          btn1.classList.add("tab-active")
+          btn2.classList.remove("tab-active")
+          hall.classList.add("wrap-active")
+          room.classList.remove("wrap-active")
+        }
+      })
+      btn2.addEventListener("click", (e) => {
+        var isActive = hall.classList.contains("wrap-active")
+        if (isActive) {
+          btn2.classList.add("tab-active")
+          btn1.classList.remove("tab-active")
+          room.classList.add("wrap-active")
+          hall.classList.remove("wrap-active")
+        }
+      })
+    </script>
   </body>
 </html>
