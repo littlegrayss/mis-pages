@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="../../css/global.css" />
     <link rel="stylesheet" href="../../css/finance.css" />
     <link rel="stylesheet" href="../../css/iconfont.css" />
+    <style>
+      .cube-btn {
+        display: block;
+        margin: 0;
+        padding: 17px 16px;
+        /* width: 100%; */
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1;
+        color: #fff;
+        background: #4a4c5b;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        color: #fff;
+        background: #fc9153;
+        margin: 10px 3vw;
+      }
+    </style>
   </head>
   <body>
     <div class="head-bar">
@@ -25,15 +48,15 @@
         </div>
         <div class="card-fd">
           <ul>
-            <li class="card-list">
+            <li class="card-list" onclick="location.href='./sum.html'">
               <div>1760</div>
               <p>今日营业额（元）</p>
             </li>
-            <li class="card-list">
+            <li class="card-list" onclick="location.href='./cost.html'">
               <div>560</div>
               <p>今日支出（元）</p>
             </li>
-            <li class="card-list">
+            <li class="card-list" onclick="location.href='./profit.html'">
               <div>1200</div>
               <p>今日盈利（元）</p>
             </li>
@@ -49,6 +72,8 @@
           </li>
         </ul>
       </section>
+
+      <div class="cube-btn" onclick="location.href='./add.html'">新增支出</div>
     </div>
   </body>
 </html>

@@ -6,39 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/iconfont.css" />
     <style>
-        .tab-fixed .select-tab {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    width: 100%;
-    height: 58px;
-    line-height: 58px;
-    text-align: center;
-    font-size: 9px;
-    background: #fff;
-}
-.tab-fixed .select-tab li {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    margin: auto;
-}
-.tab-fixed .select-tab li span {
-    position: relative;
-    display: inline-block;
-    font-size: 9px;
-    color: #9CA3AE;
-    line-height: 10px;
-}
-.tab-fixed .select-tab .on {
-    background-image: linear-gradient(225deg,#FF974D 0,#FF6830 61%,#FF6831 100%);
-    border-radius: 16px;
-    height: 32px;
-    line-height: 32px;
-    width: 96px;
-    color: #fff;
-}
+      .tab-fixed .select-tab {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        font-size: 9px;
+        background: #fff;
+      }
+      .tab-fixed .select-tab li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        margin: auto;
+      }
+      .tab-fixed .select-tab li span {
+        position: relative;
+        display: inline-block;
+        font-size: 9px;
+        color: #9ca3ae;
+        line-height: 10px;
+      }
+      .tab-fixed .select-tab .on {
+        background-image: linear-gradient(
+          225deg,
+          #ff974d 0,
+          #ff6830 61%,
+          #ff6831 100%
+        );
+        border-radius: 16px;
+        height: 32px;
+        line-height: 32px;
+        width: 96px;
+        color: #fff;
+      }
       .wrapper {
         background-color: #f5f7f6;
         height: 100%;
@@ -93,87 +99,98 @@
         font-size: 7px;
       }
       .data-container .data-list li .link {
-            color: #1F242A;
-            display: flex;
-            height: 36px;
-        }
-        .data-container .data-list li span {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #1f242a;
-}
+        color: #1f242a;
+        display: flex;
+        height: 36px;
+      }
+      .data-container .data-list li span {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #1f242a;
+      }
+      .edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 7vh;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
     <div class="head-bar">
       <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
       <h1>员工数据</h1>
+      <a class="edit">编辑</a>
     </div>
     <div class="wrapper">
       <div class="tab-fixed">
         <ul class="select-tab">
           <li>
-            <span class="on">授信通过率</span>
+            <span class="on">员工信息</span>
           </li>
           <li>
-            <span class="">额度使用率</span>
+            <span class="">员工考勤</span>
           </li>
           <li>
-            <span class="">逾期率</span>
+            <span class="">员工工资</span>
           </li>
         </ul>
       </div>
-      <section class="data-table"><a class="data-title">数据排名</a></section>
+      <section class="data-table"><a class="data-title">所有数据</a></section>
       <section class="data-container">
         <ul class="data-tab">
-          <li><span>区域/经理</span></li>
-          <li><span class="on down">授信通过率</span></li>
+          <li><span>姓名</span></li>
+          <li><span class="on down">所属部门</span></li>
           <li style="display: none;">
             <span class="on down">额度使用率</span>
           </li>
           <li style="display: none;"><span class="on down">逾期率</span></li>
-          <li><span>通过/提交 (人)</span></li>
+          <li><span>详情</span></li>
         </ul>
         <div class="data-list">
           <ul class="people-list">
             <li>
               <div class="link">
-                <span>湖北渠道招商中心</span>
-                <span>64%</span>
-                <span>351/547</span>
+                <span>张三</span>
+                <span>前台</span>
+                <span>查看</span>
               </div>
             </li>
             <li>
               <div class="link">
-                <span>湖南渠道招商中心</span>
-                <span>57%</span>
-                <span>334/591</span>
+                <span>李四</span>
+                <span>厨房</span>
+                <span>查看</span>
               </div>
             </li>
             <li>
               <div class="link">
-                <span>河南渠道招商中心</span>
-                <span>54%</span>
-                <span>215/401</span>
+                <span>王五</span>
+                <span>前台</span>
+                <span>查看</span>
               </div>
             </li>
             <li>
               <div class="link">
-                <span>广东渠道招商中心</span>
-                <span>49%</span>
-                <span>278/571</span>
+                <span>牛六</span>
+                <span>仓库</span>
+                <span>查看</span>
               </div>
             </li>
             <li>
               <div class="link">
-                <span>江西渠道招商中心</span>
-                <span>41%</span>
-                <span>124/300</span>
+                <span>何七</span>
+                <span>前台</span>
+                <span>查看</span>
               </div>
             </li>
           </ul>
