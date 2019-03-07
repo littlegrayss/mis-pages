@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/iconfont.css" />
+    <style>
+        .box-wrap {
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            padding: 4vh 6vw;
+            box-sizing: border-box;
+            font-size: 4vw;
+        }
+
+        .box-wrap:after {
+            display: block;
+            content: " ";
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid #dadee6;
+            -webkit-transform: scaleY(0.5);
+            -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box-l,
+        .box-r {
+            flex: 0 1 50%;
+        }
+
+        .box-l .box-row {
+            /* line-height: 8vh; */
+            margin-top: 4vh;
+        }
+
+        .box-l .num {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 10vw;
+        }
+
+        .box-l .status {
+            position: relative;
+            margin: 0 4vw;
+            color: #1890ff;
+            border: 2px solid #1890ff;
+            border-radius: 6vw;
+            padding: 1vh 2vw;
+        }
+
+        .box-r div {
+            /* line-height: 5vh; */
+            margin-top: 1vh;
+        }
+
+        .box-r .value {
+            float: right;
+        }
+
+        .content {
+            background-color: #f5f7f6;
+            height: calc(100vh - 20vh - 6.5vh);
+        }
+
+        .item-wrap {
+            background-color: #fff;
+            list-style-type: none;
+        }
+
+        .item-wrap .item {
+            margin-left: 20px;
+            height: 76px;
+            line-height: 76px;
+            font-size: 14px;
+            color: #25324e;
+        }
+
+        .item:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #dfdfdf;
+            -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+        }
+
+        .item-wrap .item .item-rigth {
+            float: right;
+            font-size: 14px;
+            color: #25324e;
+            margin-right: 19.2px;
+            position: relative;
+        }
+
+        .item-wrap .item .item-rigth .amount {
+            margin-right: 20px;
+        }
+
+        .btn-wrap {
+            width: 100%;
+            height: 51px;
+            background: #fc9153;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            z-index: 99;
+            color: #fff;
+            text-align: center;
+            line-height: 51px;
+        }
+
+        .btn-wrap span {
+            margin: 0 auto;
+        }
+
+        .btn-wrap-end {
+            width: 100%;
+            height: 51px;
+            background: #fc9153;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            z-index: 99;
+            color: #fff;
+            text-align: center;
+            line-height: 51px;
+        }
+
+        .btn-wrap-end a {
+            flex: 0 1 50%;
+            color: #fff;
+        }
+
+        .btn-wrap-end a:first-of-type {
+            border-right: 1px solid #f5f7f6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head-bar">
+        <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+        <h1>菜单</h1>
+    </div>
+    <div class="wrapper">
+        <section class="box-wrap">
+            <div class="box-l">
+                <div class="box-row">
+                    <span class="label">桌号</span>
+                    <span class="num">1</span>
+                </div>
+                <div class="box-row">
+                    <span class="">状态</span>
+                    <span class="status">已开单</span>
+                </div>
+            </div>
+            <div class="box-r">
+                <div>开单时间<span class="value">2019-03-04 19：10</span></div>
+                <div>人数<span class="value">2</span></div>
+                <div>当前总额<span class="value">178</span></div>
+            </div>
+        </section>
+        <section class="content">
+            <ul class="item-wrap">
+                <li class="item">
+                    <span>豉油鸡</span>
+                    <div class="item-rigth"><span class="amount">￥68.00</span></div>
+                </li>
+                <li class="item">
+                    <span>蜜汁叉烧</span>
+                    <div class="item-rigth"><span class="amount">￥48.00</span></div>
+                </li>
+                <li class="item">
+                    <span>上汤菜心</span>
+                    <div class="item-rigth"><span class="amount">￥28.00</span></div>
+                </li>
+                <li class="item">
+                    <span>夹心馒头</span>
+                    <div class="item-rigth"><span class="amount">￥16.00</span></div>
+                </li>
+                <!---->
+            </ul>
+            <!---->
+        </section>
+
+        <div class="btn-wrap-end">
+            <a href="./menu.html">
+                <span>加单</span>
+            </a>
+            <a href="./bill.html">
+                <span>结账</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
