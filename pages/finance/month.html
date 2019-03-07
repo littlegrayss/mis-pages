@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <style>
+      .wrapper {
+        padding-top: 8vh 2vw 2vw 2vh;
+        background-color: #f5f7f6;
+        height: 100%;
+        overflow: auto;
+      }
+      .item-wrap {
+        background-color: #fff;
+        list-style-type: none;
+      }
+      .item-wrap .item {
+        margin-left: 20px;
+        height: 76px;
+        line-height: 76px;
+        font-size: 14px;
+        color: #25324e;
+      }
+      .item-wrap .item:last-of-type {
+          margin-left: 0;
+          padding-left: 20px;
+          border-top: 1px solid #dadee6;
+          font-weight: 800;
+      }
+      .item-wrap .item .item-rigth {
+        float: right;
+        font-size: 14px;
+        color: #25324e;
+        margin-right: 19.2px;
+        position: relative;
+      }
+      .item-wrap .item .item-rigth .amount {
+        margin-right: 20px;
+      }
+      .item-wrap:after {
+        display: block;
+        content: " ";
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid #dadee6;
+        -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+      .table-site {
+        height: 6vh;
+        display: flex;
+        justify-content: space-between;
+      }
+      .table-site span {
+        flex: 0 1 33.333333%;
+        text-align: center;
+        line-height: 6vh;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+      .table-site span.tab-active {
+        border-bottom: 2px solid #1890ff;
+      }
+      .wrap {
+          display: none;
+      }
+      .wrap-active {
+          display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="head-bar">
+      <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+      <h1>月度账单</h1>
+    </div>
+    <div class="wrapper">
+        <div class="table-site">
+            <span class="tab-active tab-btn1">总支出</span>
+            <span class="tab-btn2">总收入</span>
+            <span class="tab-btn2">总利润</span>
+        </div>
+      <section class="wrap wrap-active">
+        <ul class="item-wrap">
+          <li class="item">
+            <span>商铺租金</span>
+            <div class="item-rigth"><span class="amount">￥10068.00</span></div>
+          </li>
+          <li class="item">
+            <span>员工工资</span>
+            <div class="item-rigth"><span class="amount">￥48000.00</span></div>
+          </li>
+          <li class="item">
+            <span>食材</span>
+            <div class="item-rigth"><span class="amount">￥28089.00</span></div>
+          </li>
+          <li class="item">
+            <span>餐具损耗</span>
+            <div class="item-rigth"><span class="amount">￥3120.00</span></div>
+          </li>
+          <li class="item">
+            <span>其他</span>
+            <div class="item-rigth"><span class="amount">￥1600.00</span></div>
+          </li>
+          <!---->
+            <li class="item">
+                <span>总支出</span>
+                <div class="item-rigth"><span class="amount">￥90877.00</span></div>
+            </li>
+        </ul>
+        
+      </section>
+
+      <section class="wrap">
+        <ul class="item-wrap">
+            <li class="item">
+                <span>2019-03-31</span>
+                <div class="item-rigth"><span class="amount">￥10068.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-30</span>
+                <div class="item-rigth"><span class="amount">￥48000.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-29</span>
+                <div class="item-rigth"><span class="amount">￥28089.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-28</span>
+                <div class="item-rigth"><span class="amount">￥3120.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-27</span>
+                <div class="item-rigth"><span class="amount">￥1600.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-26</span>
+                <div class="item-rigth"><span class="amount">￥1600.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-25</span>
+                <div class="item-rigth"><span class="amount">￥1600.00</span></div>
+            </li>
+            <li class="item">
+                <span>2019-03-24</span>
+                <div class="item-rigth"><span class="amount">￥1600.00</span></div>
+            </li>
+            <!---->
+            <li class="item">
+                <span>总收入</span>
+                <div class="item-rigth"><span class="amount">￥90877.00</span></div>
+            </li>
+        </ul>
+        
+      </section>
+
+      <section class="wrap">
+        <ul class="item-wrap">
+            <li class="item">
+                <span>总收入</span>
+                <div class="item-rigth"><span class="amount">￥10068.00</span></div>
+            </li>
+            <li class="item">
+                <span>总支出</span>
+                <div class="item-rigth"><span class="amount">￥48000.00</span></div>
+            </li>
+            <li class="item">
+                <span>总利润</span>
+                <div class="item-rigth"><span class="amount">￥48000.00</span></div>
+            </li>
+        </ul>
+        
+      </section>
+    </div>
+  </body>
+</html>
