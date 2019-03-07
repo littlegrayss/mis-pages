@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/iconfont.css" />
+    <style>
+      .wrapper {
+        background-color: #f5f7f6;
+        height: 100%;
+      }
+      .data-table {
+        margin: 7px;
+        margin-top: 15px;
+      }
+      .data-table .data-title {
+        padding-left: 10px;
+        color: #25324e;
+        font-size: 9px;
+        line-height: 10px;
+        margin-top: 7px;
+      }
+      .data-container {
+        padding: 7px;
+        border-radius: 5px;
+        margin: 7px;
+        background: #fff;
+        box-shadow: 0 2px 16px 0 rgba(37, 46, 65, 0.1);
+      }
+      .data-container .data-tab {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        text-align: center;
+        font-size: 7px;
+        color: #566272;
+        background-color: #fff;
+      }
+      .data-container .data-tab li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        height: 36px;
+        line-height: 36px;
+      }
+      .data-container .data-list .people-list {
+        background-color: #fff;
+        border-top: 1px solid #e7e7e7;
+        padding-bottom: 10px;
+      }
+      .data-container .data-list .people-list li:nth-of-type(2n + 1) {
+        background: #f9fafa;
+      }
+      .data-container .data-list .people-list li {
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .data-container .data-list li {
+        text-align: center;
+        font-size: 7px;
+      }
+      .data-container .data-list li .link {
+        color: #1f242a;
+        display: flex;
+        height: 36px;
+      }
+      .data-container .data-list li span {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #1f242a;
+      }
+      .edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 7vh;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="head-bar">
+      <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
+      <h1>账单</h1>
+    </div>
+    <div class="wrapper">
+      <section class="data-container">
+        <ul class="data-tab">
+          <li><span>姓名</span></li>
+          <li><span class="on down">所属部门</span></li>
+          <li style="display: none;">
+            <span class="on down">额度使用率</span>
+          </li>
+          <li style="display: none;"><span class="on down">逾期率</span></li>
+          <li><span>详情</span></li>
+        </ul>
+        <div class="data-list">
+          <ul class="people-list">
+            <li>
+              <div class="link">
+                <span>张三</span>
+                <span>前台</span>
+                <span>查看</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>李四</span>
+                <span>厨房</span>
+                <span>查看</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>王五</span>
+                <span>前台</span>
+                <span>查看</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>牛六</span>
+                <span>仓库</span>
+                <span>查看</span>
+              </div>
+            </li>
+            <li>
+              <div class="link">
+                <span>何七</span>
+                <span>前台</span>
+                <span>查看</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
