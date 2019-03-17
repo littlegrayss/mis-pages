@@ -232,6 +232,69 @@
     line-height: 33px;
     color: white;
   }
+  .box-wrap {
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            padding: 4vh 6vw;
+            box-sizing: border-box;
+            font-size: 4vw;
+            margin-top: 6vh;
+        }
+
+        .box-wrap:after {
+            display: block;
+            content: " ";
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid #dadee6;
+            -webkit-transform: scaleY(0.5);
+            -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box-l,
+        .box-r {
+            flex: 0 1 50%;
+            font-size: 9px;
+        }
+
+        .box-l .box-row {
+            /* line-height: 8vh; */
+            margin-top: 4vh;
+        }
+
+        .box-l .num {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 10vw;
+        }
+
+        .box-l .status {
+            position: relative;
+            margin: 0 4vw;
+            color: #1890ff;
+            border: 2px solid #1890ff;
+            border-radius: 6vw;
+            padding: 1vh 2vw;
+        }
+
+        .box-r div {
+            /* line-height: 5vh; */
+            margin-top: 1vh;
+        }
+
+        .box-r .value {
+            float: right;
+        }
     </style>
   </head>
   <body>
@@ -239,8 +302,26 @@
       <a href="javascript:;" class="g-back iconfont icon-icon_left"></a>
       <h1>菜单</h1>
     </div>
+    <section class="box-wrap">
+        <div class="box-l">
+          <div class="box-row">
+            <span class="label">桌号</span>
+            <span class="num">01</span>
+          </div>
+          <div class="box-row">
+            <span class="">状态</span>
+            <span class="status">未开单</span>
+          </div>
+        </div>
+        <div class="box-r">
+          <div>开单时间<span class="value">无</span></div>
+          <div>人数<span class="value">0</span></div>
+          <div>当前总额<span class="value">0</span></div>
+        </div>
+      </section>
     <div class="goods">
       <!--分类列表-->
+      
       <div class="menu-wrapper" ref="menuScroll">
         <ul>
           <!-- <li
@@ -342,15 +423,13 @@
                 <div class="content">
                   <h3 class="name">豉油鸡</h3>
                   <p class="desc" v-if="food.description">
-                    形容
+                      色泽鲜亮，鸡肉嫩滑
                   </p>
                   <div class="extra">
                     <span class="saled">
                       月销量 4444
                     </span>
-                    <span class="praise">
-                      点赞
-                    </span>
+                    
                   </div>
                   <!-- <img class="product" alt="" /> -->
                   <p class="price">
@@ -375,25 +454,23 @@
               >
                 <div
                   class="icon"
-                  style="background-image: url(../../img/1.jpeg)"
+                  style="background-image: url(../../img/2.jpeg)"
                 ></div>
                 <div class="content">
-                  <h3 class="name">菜名</h3>
+                  <h3 class="name">蜜汁叉烧</h3>
                   <p class="desc" v-if="food.description">
-                    形容
+                      补肾养血，滋阴润燥
                   </p>
                   <div class="extra">
                     <span class="saled">
                       月销量
                     </span>
-                    <span class="praise">
-                      点赞
-                    </span>
+                    
                   </div>
                   <!-- <img class="product" alt="" /> -->
                   <p class="price">
                     <span class="text">
-                      $12
+                     ¥ 48
                     </span>
                     <span class="unit">
                       /例
@@ -413,25 +490,23 @@
               >
                 <div
                   class="icon"
-                  style="background-image: url(../../img/1.jpeg)"
+                  style="background-image: url(../../img/3.jpg)"
                 ></div>
                 <div class="content">
-                  <h3 class="name">菜名</h3>
+                  <h3 class="name">上汤菜心</h3>
                   <p class="desc" v-if="food.description">
-                    形容
+                      咸鲜爽口，清淡宜人
                   </p>
                   <div class="extra">
                     <span class="saled">
                       月销量
                     </span>
-                    <span class="praise">
-                      点赞
-                    </span>
+                    
                   </div>
                   <!-- <img class="product" alt="" /> -->
                   <p class="price">
                     <span class="text">
-                      $12
+                      ¥ 28
                     </span>
                     <span class="unit">
                       /例
@@ -451,25 +526,23 @@
               >
                 <div
                   class="icon"
-                  style="background-image: url(../../img/1.jpeg)"
+                  style="background-image: url(../../img/4.jpg)"
                 ></div>
                 <div class="content">
-                  <h3 class="name">菜名</h3>
+                  <h3 class="name">夹心馒头</h3>
                   <p class="desc" v-if="food.description">
-                    形容
+                      保护胃肠道
                   </p>
                   <div class="extra">
                     <span class="saled">
                       月销量
                     </span>
-                    <span class="praise">
-                      点赞
-                    </span>
+                    
                   </div>
                   <!-- <img class="product" alt="" /> -->
                   <p class="price">
                     <span class="text">
-                      $12
+                      ¥ 16
                     </span>
                     <span class="unit">
                       /例
