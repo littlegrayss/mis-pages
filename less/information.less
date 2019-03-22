@@ -1,0 +1,88 @@
+.form {
+    margin-top: 12px;
+    position: relative;
+    .input-group {
+        background-color: #fff;
+        margin-bottom: 12px;
+        padding-left: 14px;
+        box-shadow: 0 1px 0 0 #E2E5EB;
+        .input-item {
+            position: relative;
+            display: flex;
+            height: 56px;
+            line-height: 56px;
+            // box-shadow: inset 0 0.5px 0 0 #E2E5EB, inset 0 -0.5px 0 0 #E2E5EB;
+            &:not(:last-of-type)::after {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 1px;
+                    box-sizing: border-box;
+                    color: #e2e5eb;
+                    border: 1px solid #e2e5eb;
+                    -webkit-transform: scaleY(0.5);
+                    transform: scaleY(0.5);
+                    -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            }
+            .form-label {
+                display: inline-block;
+                // height: 56px;
+                width: 84px;
+                white-space:nowrap;
+                font-family: "PingFangSC-Regular";
+                font-size: 15px;
+                color: #1F242A;
+            }
+            .form-value {
+                margin-right: 18px;
+                font-size: 14px;
+                color: #566272;
+            }
+            a.form-value {
+                color: #5c9dff;
+            }
+            .form-input {
+                    // margin-left: 84px;
+                    display: inline;
+                    font-size: 15px;
+                    // height: 20px;
+                }
+                &::placeholder {
+                    color: #9CA3AE;
+                }
+            .success {
+                // margin-right: 36px;
+                position: absolute;
+                right: 36px;
+                top: 0;
+                font-size: 14px;
+                color: #566272;
+            }
+        }
+        .scan-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 111px;
+            width: 89px;
+            // .db();
+            // .v();
+            // .bc();
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: inset 1px 0 0 0 #E2E5EB;
+            color: #FF5145;
+            font-size: 14px;
+            font-family: "PingFangSC-Medium";
+        }
+    }
+}
+.flex-bettewn {
+    justify-content: space-between;
+}

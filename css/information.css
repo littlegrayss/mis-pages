@@ -1,0 +1,80 @@
+.form {
+  margin-top: 12px;
+  position: relative;
+}
+.form .input-group {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding-left: 14px;
+  box-shadow: 0 1px 0 0 #E2E5EB;
+}
+.form .input-group .input-item {
+  position: relative;
+  display: flex;
+  height: 56px;
+  line-height: 56px;
+}
+.form .input-group .input-item:not(:last-of-type)::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  box-sizing: border-box;
+  color: #e2e5eb;
+  border: 1px solid #e2e5eb;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.form .input-group .input-item .form-label {
+  display: inline-block;
+  width: 84px;
+  white-space: nowrap;
+  font-family: "PingFangSC-Regular";
+  font-size: 15px;
+  color: #1F242A;
+}
+.form .input-group .input-item .form-value {
+  margin-right: 18px;
+  font-size: 14px;
+  color: #566272;
+}
+.form .input-group .input-item a.form-value {
+  color: #5c9dff;
+}
+.form .input-group .input-item .form-input {
+  display: inline;
+  font-size: 15px;
+}
+.form .input-group .input-item::placeholder {
+  color: #9CA3AE;
+}
+.form .input-group .input-item .success {
+  position: absolute;
+  right: 36px;
+  top: 0;
+  font-size: 14px;
+  color: #566272;
+}
+.form .input-group .scan-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 111px;
+  width: 89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: inset 1px 0 0 0 #E2E5EB;
+  color: #FF5145;
+  font-size: 14px;
+  font-family: "PingFangSC-Medium";
+}
+.flex-bettewn {
+  justify-content: space-between;
+}
