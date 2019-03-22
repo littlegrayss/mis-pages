@@ -12,79 +12,128 @@
         background-color: #f5f7f6;
         height: 100%;
       }
-      .data-table {
-        margin: 7px;
-        margin-top: 15px;
+      .cube-form {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.429;
+        color: #666;
+        background-color: #fff;
+        margin: 4vw;
       }
-      .data-table .data-title {
-        padding-left: 10px;
-        color: #25324e;
-        font-size: 9px;
-        line-height: 10px;
-        margin-top: 7px;
+      .cube-form-group-legend {
+        font-size: 14px;
+        color: #999;
+        background-color: #f3f4f5;
       }
-      .data-container {
-        padding: 7px;
-        border-radius: 5px;
-        margin: 7px;
-        background: #fff;
-        box-shadow: 0 2px 16px 0 rgba(37, 46, 65, 0.1);
-      }
-      .data-container .data-tab {
+      .cube-form-item {
+        position: relative;
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
-        text-align: center;
-        font-size: 7px;
-        color: #566272;
-        background-color: #fff;
-      }
-      .data-container .data-tab li {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        height: 36px;
-        line-height: 36px;
-      }
-      .data-container .data-list .people-list {
-        background-color: #fff;
-        border-top: 1px solid #e7e7e7;
-        padding-bottom: 10px;
-      }
-      .data-container .data-list .people-list li:nth-of-type(2n + 1) {
-        background: #f9fafa;
-      }
-      .data-container .data-list .people-list li {
-        border-bottom: 1px solid #f1f1f1;
-      }
-      .data-container .data-list li {
-        text-align: center;
-        font-size: 7px;
-      }
-      .data-container .data-list li .link {
-        color: #1f242a;
-        display: flex;
-        height: 36px;
-      }
-      .data-container .data-list li span {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        display: flex;
-        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
         align-items: center;
-        text-align: center;
-        color: #1f242a;
+        padding: 0 15px;
+        min-height: 46px;
       }
-      .edit {
+      .cube-form-label {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        word-wrap: break-word;
+        word-break: break-word;
+        width: 100px;
+        padding-right: 10px;
+      }
+
+      .cube-form_standard .cube-form-field {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        font-size: 14px;
+      }
+      .cube-form_standard .cube-validator {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+      }
+      .cube-input {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.429;
+        background-color: #fff;
+        /* position: relative; */
+      }
+      .cube-form_standard .cube-input input {
+        padding: 13px 0;
+        background-color: transparent;
+      }
+      .cube-input-field {
+        display: block;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #666;
+        line-height: inherit;
+        background-color: inherit;
+        border-radius: 2px;
+        outline: none;
+        border: 0;
+        margin: 0;
+      }
+      .cube-btn2 {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+        color: inherit;
+        background: none;
+        border: none;
+      }
+      .border-bottom-1px:after {
+        content: "";
+        border-bottom: 1px solid #ebebeb;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        -webkit-transform-origin: 0 bottom;
+        transform-origin: 0 bottom;
+        width: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 7vh;
-        height: 7vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+      .cube-btn {
+        display: block;
+        margin: 0;
+        padding: 17px 16px;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1;
+        color: #fff;
+        background: #4a4c5b;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
       }
     </style>
   </head>
@@ -95,56 +144,67 @@
       <h1>账单</h1>
     </div>
     <div class="wrapper">
-      <section class="data-container">
-        <ul class="data-tab">
-          <li><span>姓名</span></li>
-          <li><span class="on down">所属部门</span></li>
-          <li style="display: none;">
-            <span class="on down">额度使用率</span>
-          </li>
-          <li style="display: none;"><span class="on down">逾期率</span></li>
-          <li><span>详情</span></li>
-        </ul>
-        <div class="data-list">
-          <ul class="people-list">
-            <li>
-              <div class="link">
-                <span>张三</span>
-                <span>前台</span>
-                <span>查看</span>
+      <form class="cube-form cube-form_standard">
+        <div class="cube-form-group">
+          <p class="cube-form-group-legend"></p>
+          <div class="cube-form-group-content">
+            <div class="cube-form-item border-bottom-1px cube-form-item_required">
+              <div class="cube-form-label">
+                <span>菜名</span>
               </div>
-            </li>
-            <li>
-              <div class="link">
-                <span>李四</span>
-                <span>厨房</span>
-                <span>查看</span>
+              <div class="cube-validator cube-form-field">
+                <div class="cube-validator-content">
+                  <div class="cube-input">
+                    <!---->
+                    <input type="text" placeholder="请输入" class="cube-input-field" />
+                    <!---->
+                  </div>
+                </div>
               </div>
-            </li>
-            <li>
-              <div class="link">
-                <span>王五</span>
-                <span>前台</span>
-                <span>查看</span>
+            </div>
+
+            <div class="cube-form-item border-bottom-1px cube-form-item_required">
+              <div class="cube-form-label">
+                <span>分类</span>
               </div>
-            </li>
-            <li>
-              <div class="link">
-                <span>牛六</span>
-                <span>仓库</span>
-                <span>查看</span>
+              <div class="cube-validator cube-form-field">
+                <div class="cube-validator-content">
+                  <div class="cube-input">
+                    <!---->
+                    <input type="text" placeholder="请输入" class="cube-input-field" />
+                    <!---->
+                  </div>
+                </div>
               </div>
-            </li>
-            <li>
-              <div class="link">
-                <span>何七</span>
-                <span>前台</span>
-                <span>查看</span>
+            </div>
+
+            <div class="cube-form-item border-bottom-1px cube-form-item_required">
+              <div class="cube-form-label">
+                <span>价格</span>
               </div>
-            </li>
-          </ul>
+              <div class="cube-validator cube-form-field">
+                <div class="cube-validator-content">
+                  <div class="cube-input">
+                    <!---->
+                    <input type="text" placeholder="请输入" class="cube-input-field" />
+                    <!---->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
-      </section>
+        <div class="cube-form-group">
+          <p class="cube-form-group-legend"></p>
+          <div class="cube-form-group-content">
+            <button type="submit" class="cube-btn">
+              <!---->
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>
